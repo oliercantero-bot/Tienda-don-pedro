@@ -10,14 +10,15 @@ total_productos = 0
 valor_inventario = 0
 
 for linea in productos:
+    if not linea.strip():
+        continue
+
     print("-", linea)
     total_productos += 1
-    
-    partes = linea.split("|")
-    if len(partes) >= 2:
-        precio = int(partes[-1].strip())
-        valor_inventario += precio
-        
-    
-print(f"Total de productos: ${total_productos}")
-print(f"Valor del inventario: : $51000")
+
+    precio_texto = linea.rsplit(" - ", 1)[-1]
+    precio_limpio = precio_texto.replace("$", "").replace(".", "").strip()
+    valor_inventario += int(precio_limpio)
+
+print(f"Total de productos: {total_productos}")
+print(f"Valor del inventario: ${valor_inventario:,}".replace(",", "."))
