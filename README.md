@@ -4,6 +4,16 @@ Programa en Python para llevar el control del inventario de una tienda de barrio
 Lee los productos y sus precios desde un archivo de texto, los lista y calcula el valor total del inventario.
 Además, el proyecto guarda los clientes frecuentes y las ventas del día de Don Pedro.
 
+## Domicilios
+
+Horario de 7:00 a.m a 6:00 p.m
+
+Barrios que cubrimos:
+-Manrrique
+-Poblado
+-San Antonio
+
+
 ## Productos
 
 | Producto    | Precio  |
